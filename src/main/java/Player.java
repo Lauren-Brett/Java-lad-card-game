@@ -9,4 +9,8 @@ public class Player {
     public Card getCard(){
         return this.card;
     }
+
+    public void addCardToPlayer(Card card) {
+        this.card = card;
+    }
 }

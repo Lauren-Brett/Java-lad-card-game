@@ -2,12 +2,12 @@ import java.util.ArrayList;
 
 public class Dealer {
 
-    private ArrayList<Card> deck;
+    private Deck deck;
     private Player player1;
     private Player player2;
 
     public Dealer(){
-        this.deck = new Deck;
+        this.deck = new Deck();
 
         this.player1 = new Player();
         this.player2 = new Player();
@@ -16,8 +16,10 @@ public class Dealer {
     // dealCard - player1
     // if p1.card.rank > p2.card.rank = p1 wins
 
-    public void givePlayerCard(){
-       this.deck.dealCard();
+    public void givePlayerCard(Player player){
+       Card card = this.deck.dealCard();
+       player.addCardToPlayer(card);
+
     }
 
 

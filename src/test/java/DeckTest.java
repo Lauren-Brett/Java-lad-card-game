@@ -11,12 +11,14 @@ public class DeckTest {
     private Card card;
     private Deck deck;
     private Player player;
+    private Dealer dealer;
 
     @Before
     public void before(){
         card = new Card(SuitType.HEARTS, RankType.TWO);
         deck = new Deck();
         player = new Player();
+        dealer = new Dealer();
     }
 
     @Test
@@ -51,12 +53,9 @@ public class DeckTest {
     public void playerDealtOneCard(){
         deck.addCards();
         deck.dealCard();
+        dealer.givePlayerCard(player);
+        assertEquals(1, player.getCard());
 
-        assertEquals( , player.getCard());
-
-        // size of deck decreases
-        // player card = 1
-        //
     }
 
 

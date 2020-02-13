@@ -1,4 +1,5 @@
 import java.lang.reflect.Array;
+import java.net.PortUnreachableException;
 import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.Collections;
@@ -35,7 +36,8 @@ public class Deck {
 
 
     public Card dealCard() {
-        return deck.get(0);
+//        Deck deck = this.deck.addCards();
+        return deck.remove(0);
 
     }
 
